@@ -145,3 +145,21 @@
 * `document.querySelectorAll("태그명")`
 * `document.querySelectorAll(".클래스명")`
 * `getElements...`와 `querySelectorAll` 함수는 `index`를 사용해서 대상으로 선택하므로 사용 시 주의가 필요하다.  
+-----------------
+## 가족관계선택속성 
+* `parentNode`, `parentElement`
+* `header>nav`관계DOM이 있을 때 `nav`의 부모를 선택할 때 이용 할 수 있다. 
+* DOM.parentNode, DOM.parentElement 등 ...
+* `childNodes`, `children`
+* `header>nav`관계DOM이 있을 떄 `header`의 자식을 선택할 때 이용 할 수 있다. 
+* `header.childNodes`, `header.children`
+* `firstChild`, `firstElementChild` 
+* 첫번째 자식을 선택할 때 객체.firstChild를 쓴다.
+* `lastChild`, `lastElementChild`
+* 마지막 자식을 선택할 때 객체.lastChild를 쓴다.  css에서의 `nth-child`속성이랑 비슷하다. 
+* `nextSibling`, `nextElementSibling`
+* `nextSibling` : 공백포함 다음 형제 속성
+* `nextElementSibling` : 다음 형제 요소만 인식하는 속성 
+* `previousSibling`, `previousElementSibling`
+* `previousSibling` : 공백포함 이전 형제 속성 
+* `previousElementSibling` : 이전 형제 요소만 인식하는 속성 

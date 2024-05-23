@@ -1,1 +1,13 @@
 /* 디자인 자유롭게 */
+main {
+    width: 800px; background-color: lightblue;
+}
+main h1 {}
+main p {}
+main ul {}
+main ul li {}
+main ul li #height {}
+main ul li #weifht {}
+main ul li #goals {}
+main p {}
+main p #result{}
