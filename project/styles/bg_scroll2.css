@@ -1,0 +1,49 @@
+header {
+    position: absolute;
+    position: fixed; left: 35px; top: 60px;
+}
+header h1 {
+    font-size: 2.15rem; font-weight: 500;
+    margin-bottom: 20px;
+}
+header nav {}
+header nav a {
+    font-size: 1.375rem;
+    padding-right: 10px;
+}
+header nav a:hover {
+    border-bottom: 2px solid #474444;
+    text-align: center;
+
+}
+main {}
+main .bg {
+    height: 100vh; background-size: cover;
+}
+main .bg:nth-child(1) {background-image: url(https://i.pinimg.com/736x/60/ca/20/60ca202a36a83e94177aa42824eec72b.jpg);}
+main .bg:nth-child(2) {background-image: url(https://media.istockphoto.com/id/1487766414/ko/%EC%82%AC%EC%A7%84/%EC%B0%BD%EB%AC%B8%EA%B3%BC-%EB%B2%A0%EC%9D%B4%EC%A7%80%EC%83%89-%EB%B2%BD%EC%9D%B4-%EC%9E%88%EB%8A%94-%EB%B0%9D%EC%9D%80-%EA%B1%B0%EC%8B%A4-%EC%9D%B8%ED%85%8C%EB%A6%AC%EC%96%B4-%EB%94%94%EC%9E%90%EC%9D%B8%EC%9D%80-%ED%98%84%EB%8C%80%EC%A0%81%EC%9D%B8-%EC%86%8C%ED%8C%8C-%EC%95%94%EC%B0%A8-%ED%94%8C%EB%A1%9C%EC%96%B4-%EB%9E%A8%ED%94%84-%EC%BB%A4%ED%94%BC-%ED%85%8C%EC%9D%B4%EB%B8%94-%EB%B0%8F-%EA%B8%B0%ED%83%80-%EC%9E%A5%EC%8B%9D-%EC%9A%94%EC%86%8C-3d-%EB%A0%8C%EB%8D%94%EB%A7%81%EC%9C%BC%EB%A1%9C-%EA%BE%B8%EB%A9%B0%EC%A0%B8-%EC%9E%88%EC%8A%B5%EB%8B%88%EB%8B%A4.webp?b=1&s=170667a&w=0&k=20&c=Je4Kyj7GDDdDm-WeJfswVhTZe0taNpzADT3MQsT7dm4=)}
+main .bg:nth-child(3) {background-image: url(https://images.unsplash.com/photo-1593696140826-c58b021acf8b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fCVFQyU5RCVCOCVFRCU4NSU4QyVFQiVBNiVBQyVFQyU5NiVCNCUyMCVFQiVBQSVBOCVFQiU4RCU5OHxlbnwwfHwwfHx8MA%3D%3D);}
+main .bg:nth-child(4) {background-image: url(https://media.istockphoto.com/id/1354262369/ko/%EC%82%AC%EC%A7%84/%ED%98%84%EB%8C%80%EC%A0%81%EC%9D%B8-%EC%9D%B8%ED%85%8C%EB%A6%AC%EC%96%B4-%EB%B0%B0%EA%B2%BD-%EA%B1%B0%EC%8B%A4-%EC%8A%A4%EC%B9%B8%EB%94%94%EB%82%98%EB%B9%84%EC%95%84-%EC%8A%A4%ED%83%80%EC%9D%BC-3d-%EB%A0%8C%EB%8D%94-3d-%EC%9D%BC%EB%9F%AC%EC%8A%A4%ED%8A%B8%EB%A0%88%EC%9D%B4%EC%85%98%EC%9D%98-%ED%8F%AC%EC%8A%A4%ED%84%B0-%ED%94%84%EB%A0%88%EC%9E%84%EC%9D%84-%EB%AA%A8%EC%9D%98.webp?b=1&s=170667a&w=0&k=20&c=27_EIImbFv3NLOWo2h1pUwOK8wvZifbRbQVMdtpC4e0=);}
+.link {
+    display: flex; flex-flow: column wrap;
+    position: fixed; letter-spacing: 50px; top: 50%; transform: translateY(-50%);
+}
+.link a {
+    background: #222;
+    width: 25px; height: 2px; margin-bottom: 10px;
+    transition: all 0.5s;
+    margin-left: 35px;
+}
+.link a:hover {background: #555;}
+.link .active {width: 100px; background: #fff;}
+/* mouse design */
+.mouse {
+    /* width: 50px; height: 50px; */
+    /* border: 2px solid #fff; border-radius: 50%; */
+    position: fixed; left: 0; top: 0; /* 초기 위치 */
+    transform: translate(-50%, -50%);
+    pointer-events: none; /* 마우스 클릭 대상 해제 필수!*/
+}
+.mouse img {
+    width: 50px; height: 50px;
+}

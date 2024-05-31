@@ -1,0 +1,42 @@
+body,html {scroll-behavior: smooth;}
+main .bg {
+    height: 100vh; background-size: cover;
+    margin-bottom: 100px;
+}
+main .bg:nth-child(1) {background-image: url(https://i.pinimg.com/736x/b7/55/db/b755db522d1a5959086aa3bd235e384b.jpg);}
+main .bg:nth-child(2) {background-image: url(https://media.istockphoto.com/id/1540164261/ko/%EC%82%AC%EC%A7%84/%EB%B0%A4%EC%97%90-%EC%88%98%EC%98%81%EC%9E%A5%EC%9D%B4-%EC%9E%88%EB%8A%94-%EB%9F%AD%EC%85%94%EB%A6%AC-%ED%95%98%EC%9A%B0%EC%8A%A4.webp?b=1&s=170667a&w=0&k=20&c=bincejq5WplbMefVa0d1pi8v_oCY4LG5_Zag_FpoeNs=);}
+main .bg:nth-child(3) {background-image: url(https://images.unsplash.com/photo-1593696140826-c58b021acf8b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fCVFQyU5RCVCOCVFRCU4NSU4QyVFQiVBNiVBQyVFQyU5NiVCNCUyMCVFQiVBQSVBOCVFQiU4RCU5OHxlbnwwfHwwfHx8MA%3D%3D);}
+main .bg:nth-child(4) {background-image: url(https://media.istockphoto.com/id/1354262369/ko/%EC%82%AC%EC%A7%84/%ED%98%84%EB%8C%80%EC%A0%81%EC%9D%B8-%EC%9D%B8%ED%85%8C%EB%A6%AC%EC%96%B4-%EB%B0%B0%EA%B2%BD-%EA%B1%B0%EC%8B%A4-%EC%8A%A4%EC%B9%B8%EB%94%94%EB%82%98%EB%B9%84%EC%95%84-%EC%8A%A4%ED%83%80%EC%9D%BC-3d-%EB%A0%8C%EB%8D%94-3d-%EC%9D%BC%EB%9F%AC%EC%8A%A4%ED%8A%B8%EB%A0%88%EC%9D%B4%EC%85%98%EC%9D%98-%ED%8F%AC%EC%8A%A4%ED%84%B0-%ED%94%84%EB%A0%88%EC%9E%84%EC%9D%84-%EB%AA%A8%EC%9D%98.webp?b=1&s=170667a&w=0&k=20&c=27_EIImbFv3NLOWo2h1pUwOK8wvZifbRbQVMdtpC4e0=);}
+nav {
+    display: flex;
+    flex-flow: column nowrap;
+    position: fixed;
+    right: 50px; bottom: 50px;
+}
+nav a {
+    background-color: #494545;
+    color: #fff;
+    border-radius: 50%;
+    width: 30px; height: 30px;
+    overflow: hidden;
+    position: absolute; right: 0;
+    position: fixed; right: 20px; top: 10px;
+    transition: all 0.5s;
+}
+nav a::after {
+    display: inline-block; position: absolute; right: 0;
+    padding: 10px; line-height: 8px;
+    white-space: nowrap;
+}
+nav a:hover {
+    width: 100px; border-radius: 10px;
+    text-align: center;
+}
+nav a:nth-child(1) {top: 400px;}
+nav a:nth-child(2) {top: 450px;}
+nav a:nth-child(3) {top: 500px;}
+nav a:nth-child(4) {top: 550px;}
+nav a:nth-child(1):hover::after {content: 'Interior A.';}
+nav a:nth-child(2):hover::after {content: 'Interior B.';}
+nav a:nth-child(3):hover::after {content: 'Interior C.';}
+nav a:nth-child(4):hover::after {content: 'Interior D.';}
