@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>swiper-1</title>
+    <link rel="stylesheet" href="./styles/reset.css">
+    <!--플러그인 필수 css cdn 연결-->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <!--플러그인 필수 JS cdn 연결-->
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <style>
+        .swiper {width: 500px; height: 400px; background-color: lightcoral;}
+        .main-slide {
+            width: 800px;
+        }
+        .sub-slide {}
+        .main-slide {width: 800px; margin: 50px auto;}
+        .main-slide .swiper-wrapper {}
+        .main-slide .swiper-wrapper .swiper-slide {
+            background-size: cover;
+            background-position: center;
+            color: #fff; font-size: 5rem;
+        }
+        .main-slide .swiper-wrapper .slide1 {background-image: url(https://images.unsplash.com/photo-1559181567-c3190ca9959b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fCVFQSVCMyVCQyVFQyU5RCVCQ3xlbnwwfHwwfHx8MA%3D%3D);}
+        .main-slide .swiper-wrapper .slide2 {background-image: url(https://images.unsplash.com/photo-1614630536429-74e43f302c31?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTE2fHwlRUElQjMlQkMlRUMlOUQlQkN8ZW58MHx8MHx8fDA%3D);}
+        .main-slide .swiper-wrapper .slide3 {background-image: url(https://images.unsplash.com/photo-1587324438673-56c78a866b15?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTM2fHwlRUElQjMlQkMlRUMlOUQlQkN8ZW58MHx8MHx8fDA%3D);}
+        /* ==============sub-slide */
+        .sub-slide {}
+        .sub-slide .slide1 {background-image: url(https://images.unsplash.com/photo-1489674267075-cee793167910?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8JUVBJUIyJUE4JUVDJTlBJUI4fGVufDB8fDB8fHww);}
+        .sub-slide .slide2 {background-image: url(https://images.unsplash.com/photo-1487782310695-ed8583618566?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mzh8fCVFQSVCMiVBOCVFQyU5QSVCOHxlbnwwfHwwfHx8MA%3D%3D);}
+        .sub-slide .slide3 {background-image: url(https://images.unsplash.com/photo-1516466723877-e4ec1d736c8a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDR8fCVFQSVCMiVBOCVFQyU5QSVCOHxlbnwwfHwwfHx8MA%3D%3D);}
+    </style>
+</head>
+<body>
+    <!-- swiper slide plugin 주의사항! -->
+    <!-- swiper 플러그인을 사용하려면 swiper가 제공하는 html, css, js 규칙을 반드시 지켜야한다.
+    특히 html의 가족관계 및 지정된 클래스명을 지켜야적용되기 때문에 
+    대소문자, 공백, 스펠링 등 모두 주의해서 사용해야한다.
+    대신 swiper가 제공하는 기본 명칭 외에 추가 클래스명은 자유롭게 지정가능하다. -->
+    <div class="swiper main-slide">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide slide1">1</div>
+            <div class="swiper-slide slide2">2</div>
+            <div class="swiper-slide slide3">3</div>
+        </div>
+    </div>
+    <div class="swiper sub-slide">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide slide1">1</div>
+            <div class="swiper-slide slide2">2</div>
+            <div class="swiper-slide slide3">3</div>
+        </div>
+    </div>
+    <script>
+        // const 변수 = new Swiper('적용대상')
+        // const 변수 = new Swiper('적용대상', {옵션:값, 옵션:값,})
+        const swiper1 = new Swiper('.main-slide',{
+            //슬라이드 진행 방향
+            //direction:'vertical',
+            //움직이지 않고 제자리 슬라이드 변환
+            effect:'cards',//cube or fade
+            //cube 옵션 : effect:'cube' 설정 시 가능
+            cubeEffect:{
+                shadow:true,
+                shadowOffset:30, //기본값 20
+                shadowScale:1.5, //기본값 1
+            },
+            //자동재생(기본 3초)
+            /* autoplay:{delay:1000}, */
+            //마지막 슬라이드에서 시작 슬라이드로 자연스럽게 변환
+            loop:true,
+        })
+        const swiper2 = new Swiper('.sub-slide',{
+            effect:'cards',
+            cubeEffect:{
+                shadow:true,
+                shadowOffset:30,
+                shadowScale:1.5,
+            },
+            loop:true,
+            
+        })
+    </script>
+</body>
+</html>
